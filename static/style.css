@@ -4,7 +4,7 @@ ul li.btn a{
 			background-color: rebeccapurple; /* Colorer les fonts de nos textes dans le menu */
 			padding:8px; /* Espace en haut, en bas, à gauche et à droite sera à 10px*/
 			font-size: 15px;/* Augmenter la taille de nos textes*/
-			text-align: center
+			text-align: center;
 		}
 
 ul li.btn:hover a{
@@ -12,6 +12,7 @@ ul li.btn:hover a{
 			background-color:white; /* couleur du font de l'élément*/
 			transition:0.9s all; /* le changement de cette couleur se fera apres 0.5sec et ça se fera sur tout l'élément
 			En général on met 0.3s*/
+			display: inline-block;
 		}
 
 body{
@@ -28,11 +29,11 @@ div.btn-submit :hover btn{
 			transition:0.9s all; /* le changement de cette couleur se fera apres 0.5sec et ça se fera sur tout l'élément
 			En général on met 0.3s*/
 		}
-h2.title{
+div.row div.idea h2.title{
 	background-color: rebeccapurple;
-	width: 1000px;
+	width: 200px;
 	text-align: center;
-	padding: 10px 10px;
+	padding: 3px 3px;
 	color:white;
 }
 
@@ -58,7 +59,7 @@ button.active {
     transform: translateX(-100px);
 }
 
-nav{
+nav.nav{
     background-color: rebeccapurple;
     position: fixed;
     top: 0;
@@ -69,11 +70,11 @@ nav{
     transition: transform 0.3s ease-in-out;
 }
 
-nav.active {
+#nav {
     transform: translateX(0);
 }
 
-nav ul {
+#nav ul {
     padding: 0;
     list-style-type: none;
     margin: 0;
@@ -87,12 +88,6 @@ nav a {
     color: white;
     text-decoration: none;
 }
-
-
-
-
-
-
 
 div.btn-submit .btn{
 	background-color:rebeccapurple; 
@@ -113,14 +108,14 @@ section{
 }
 */
 header{
-	padding-top:0px;
+	padding:2px 2px;
 	
 }
 footer{
 	padding: 20px;
 	background-color: black;
 	color: white;
-	text-align: center;
+	/*text-align: center; */
 }
 
 .container{
@@ -135,4 +130,18 @@ text-align:center;
 	background-color: rebeccapurple;
 	color: rebeccapurple;
 	text-align: center;
+}
+
+#pied ul.bt li.soc{
+	list-style:none;
+}
+
+section{
+	/*background-size: 8px;*/
+	/*padding: 5px 5px;*/
+	padding-top: 1px;
+}
+h2#title{
+	background-size: 10px;
+	background-color: yellow;
 }

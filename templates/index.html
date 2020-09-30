@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title></title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="./static/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<meta charset="utf-8">
 	<script src="./static/script.js" defer></script>
 </head>
 <body>
@@ -13,6 +14,7 @@
 	</header>
 
 	<button id="btn">☰</button>
+	
         <nav id="nav">
             <ul> 
             	<li> <a href="https://www.linkedin.com/company/adncorp/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -22,14 +24,8 @@
 				<li> <a href="" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
             </ul>
         </nav>
+    <h2 id="title" align="center">Credit Scoring Model </br>With Machine Learning </h2>
 
-	<div class="showcase container purple lighten-3">
-	<div class="row">
-		<div class="col 12 m10 offset-ml center">
-			<h2 class="title"> Credit Scoring Model </br>With Machine Learning </h2>
-		</div>
-	</div>
-	</div>
 	<div class="desc" align="center">
 		<ul>
 			<li class="btn"><a href="{{url_for('index')}}">Analyse</a></li>
@@ -38,34 +34,31 @@
 		</ul>
 	</div>
 
-<section class="section section-signup blocktext" align="center">
-	<div class="container">
-		<div class="row">
-			<div class="col s12 m4">
-				<div class="card-panel grey lighten-4 grey-text text-darken-4 z-depth-0">
+<section class="sec" align="center">
+	<div class="card-panel grey lighten-4 grey-text text-darken-4 z-depth-0">
 					<form method="POST" action="{{url_for('analyze')}}">
 						<div class="input-field">
-							<p class="range-field">
-								<input type="range" id="ApplicantIncomeInput" min="100" max="100000" step="100" value="0" name="ApplicantIncome">
-							<label for="ApplicantIncome">ApplicantIncome</label>
+							<p> <label>ApplicantIncome:</label>  
+								<input type="number" id="ApplicantIncomeInput" min="100" max="100000" step="100" value="0" name="ApplicantIncome">
+							</p>
 						</div>
 
 						<div class="input-field">
-							<p class="range-field">
-								<input type="range" id="CoapplicantIncomeInput" min="100" max="50000" value="0" step="100" name="CoapplicantIncome">
-							<label for="CoapplicantIncome">CoapplicantIncome</label>
+							<p>	<label>CoapplicantIncome:</label>
+								<input type="number" id="CoapplicantIncomeInput" min="100" max="50000" value="0" step="100" name="CoapplicantIncome">
+							</p>
 						</div>
 
 						<div class="input-field">
-							<p class="range-field">
-								<input type="range" id="petal_lengthInput" min="0" max="700" step="10" value="0" name="LoanAmount">
-							<label for="LoanAmount">LoanAmount</label>
+							<p>	<label>LoanAmount:</label>
+								<input type="number" id="LoanAmountInput" min="0" max="700" step="10" value="0" name="LoanAmount">
+							</p>
 						</div>
 
 						<div class="input-field">
-							<p class="range-field">
-								<input type="range" id="Loan_Amount_Term Input" min="0" max="480" step="10" value="0" name="Loan_Amount_Term">
-							<label for="Loan_Amount_Term">Loan_Amount_Term</label>
+							<p>	<label>Loan_Amount_Term:</label>
+								<input type="number" id="Loan_Amount_Term Input" min="0" max="480" step="10" value="0" name="Loan_Amount_Term">
+							</p>
 						</div>
 						<!-- New -->
 						<div>
@@ -180,13 +173,14 @@
 								</p>
 						</div>
 						<div class="input-field">
-							<select id="role" name="model_choice">
-								<option value="" disabled selected>Select Model</option>
-								<option value="logitmodel">Logistic Regression</option>
-								<option value="knnmodel">K-nearest Model</option>
-								<option value="svmmodel">SVM Model</option>
-							</select>
-							<label for="role">Select ML Algorithm</label>
+							<p>	<label>Select ML Algorithm:</label>
+								<select id="role" name="model_choice">
+									<option value="" disabled selected>Select Model</option>
+									<option value="logitmodel">Logistic Regression</option>
+									<option value="knnmodel">K-nearest Model</option>
+									<option value="svmmodel">SVM Model</option>
+								</select>	
+							</p>
 						</div>
 						<div class='btn-submit'>
 							<input type="submit" value="Predict" class="btn">
@@ -200,10 +194,10 @@
                 <h5 class="pred">Prediction:</h5>
                   <div class="collection" role="alert">
                    <!-- <p  class="collection-item active purple">Predicted result {{ result_prediction }} </p>-->
-                    <p  class="collection-item active purple"></p>
+                    <p  class="pre"></p>
                   </div>       			
 
-                <div class="card-image waves-effect waves-block waves-light">
+                <div class="pre">
 
                   {% if result_prediction == 1 %}
                     <p><strong>Insolvable</strong></p>
@@ -213,15 +207,14 @@
                     <p></p>
                   {% endif%}
                 </div>
-		  </div>
-	       
-	</section>
+		  	</div>
+	      </div>			
+</section>
 	<!--
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/q7b3KU374Nc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 	       <!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/ materialize.min.js"></script> -->
 
 	<footer>
 		<div>
