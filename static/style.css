@@ -107,10 +107,6 @@ section{
 	text-align: right;
 }
 */
-header{
-	padding:2px 2px;
-	
-}
 footer{
 	padding: 20px;
 	background-color: black;
@@ -142,6 +138,7 @@ section{
 	padding-top: 1px;
 }
 h2#title{
-	background-size: 10px;
-	background-color: yellow;
+	background-size: 100px;
+	width: 500px;
+	background-color: red;
 }
