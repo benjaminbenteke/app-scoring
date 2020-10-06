@@ -132,13 +132,14 @@ text-align:center;
 	list-style:none;
 }
 
-section{
-	/*background-size: 8px;*/
-	/*padding: 5px 5px;*/
-	padding-top: 1px;
-}
 h2#title{
 	background-size: 100px;
 	width: 500px;
 	background-color: red;
+}
+div.centrage {
+	text-align: center;
+}
+div.al p.middle{
+	text-align: center;
 }

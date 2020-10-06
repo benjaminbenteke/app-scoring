@@ -35,30 +35,31 @@
 		</ul>
 	</div>
 
-<section class="sec" align="center">
-	<div class="card-panel grey lighten-4 grey-text text-darken-4 z-depth-0">
+<div class="centrage">	
+	<section>
+	
 					<form method="POST" action="{{url_for('analyze')}}">
 						<div class="input-field">
 							<p> <label>ApplicantIncome:</label>  
-								<input type="number" id="ApplicantIncomeInput" min="100" max="7000000" step="50" value="0" name="ApplicantIncome">
+								<input type="number" id="ApplicantIncomeInput" min="100" max="7000000" step="50" value="" name="ApplicantIncome">
 							</p>
 						</div>
 
 						<div class="input-field">
 							<p>	<label>CoapplicantIncome:</label>
-								<input type="number" id="CoapplicantIncomeInput" min="100" max="7000000" value="0" step="50" name="CoapplicantIncome">
+								<input type="number" id="CoapplicantIncomeInput" min="100" max="7000000" value="" step="50" name="CoapplicantIncome">
 							</p>
 						</div>
 
 						<div class="input-field">
 							<p>	<label>LoanAmount:</label>
-								<input type="number" id="LoanAmountInput" min="0" max="7000000" step="10" value="0" name="LoanAmount">
+								<input type="number" id="LoanAmountInput" min="0" max="7000000" step="10" value="" name="LoanAmount">
 							</p>
 						</div>
 
 						<div class="input-field">
 							<p>	<label>Loan_Amount_Term:</label>
-								<input type="number" id="Loan_Amount_Term Input" min="0" max="" step="7000000" value="0" name="Loan_Amount_Term">
+								<input type="number" id="Loan_Amount_Term Input" min="0" max="7000000" step="50" value="" name="Loan_Amount_Term">
 							</p>
 						</div>
 						<!-- New -->
@@ -211,6 +212,7 @@
 		  	</div>
 	      </div>			
 </section>
+</div>
 	<!--
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/q7b3KU374Nc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
