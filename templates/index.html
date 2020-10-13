@@ -35,10 +35,10 @@
 		</ul>
 	</div>
 
-<div class="centrage">	
+<div id="centrage">	
 	<section>
 	
-					<form method="POST" action="{{url_for('analyze')}}">
+					<form method="POST" action="{{url_for('analyze')}}" class="form">
 						<div class="input-field">
 							<p> <label>ApplicantIncome:</label>  
 								<input type="number" id="ApplicantIncomeInput" min="100" max="7000000" step="50" value="" name="ApplicantIncome">
@@ -107,7 +107,7 @@
 						</div>
 
 						<div>
-							<p>Dependents: <label for="Dependents"><select id="styledSelect1" name="Dependents">
+							<p>Dependents: <label for="Dependents"><select class="styledSelect1" name="Dependents">
 							     <option value="">
 							        Select
 							     </option>
@@ -128,7 +128,7 @@
 						</div>
 
 						<div>
-							<p>Education: <label for="Education"><select id="styledSelect1" name="Education">
+							<p>Education: <label for="Education"><select class="styledSelect1" name="Education">
 							     <option value="">
 							        Select
 							     </option>
@@ -143,7 +143,7 @@
 						</div>
 
  						<div>
-							<p>Self_Employed: <label for="Self_Employed"><select id="styledSelect1" name="Self_Employed">
+							<p>Self_Employed: <label for="Self_Employed"><select class="styledSelect1" name="Self_Employed">
 							     <option value="">
 							        Select
 							     </option>
@@ -158,7 +158,7 @@
 						</div>
 
 						<div>
-							<p>Property_Area: <label for="Property_Area"><select id="styledSelect1" name="Property_Area">
+							<p>Property_Area: <label for="Property_Area"><select class="styledSelect1" name="Property_Area">
 							     <option value="">
 							        Select
 							     </option>
@@ -188,30 +188,23 @@
 							<input type="submit" value="Predict" class="btn">
 							<input type="reset" value="clear" class="btn">
 						</div>
+						<div>
+							<h5 class="pred">Prediction:</h5>
+							<div class="pre">
+
+			                  {% if result_prediction == 1 %}
+			                    <p><strong>insolvent</strong></p>
+			                  {% elif result_prediction == 0 %}
+			                    <p><strong>Solvable</strong></p>    
+			                  {% else %}
+			                    <p></p>
+			                  {% endif%}
+               				</div>
+						</div>
 					</form>
 				</div>
-			</div>
-
-			<div class="col s12 m4 offers">
-                <h5 class="pred">Prediction:</h5>
-                  <div class="collection" role="alert">
-                   <!-- <p  class="collection-item active purple">Predicted result {{ result_prediction }} </p>-->
-                    <p  class="pre"></p>
-                  </div>       			
-
-                <div class="pre">
-
-                  {% if result_prediction == 1 %}
-                    <p><strong>insolvent</strong></p>
-                  {% elif result_prediction == 0 %}
-                    <p><strong>Solvable</strong></p>    
-                  {% else %}
-                    <p></p>
-                  {% endif%}
-                </div>
-		  	</div>
-	      </div>			
-</section>
+			</div>		
+	</section>
 </div>
 	<!--
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/q7b3KU374Nc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
